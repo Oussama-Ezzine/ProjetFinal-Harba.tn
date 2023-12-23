@@ -1,0 +1,859 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+:root{
+    --hover-width: 72%;
+    --other-width: 25%;
+    --speed:1000ms; 
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    color: rgb(246, 152, 75);
+    background-color: rgb(246, 152, 75);
+    background-color: rgb(56, 56, 56);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.mainpage{
+    background: url(BG.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height:100%;
+    left: 0;
+    top: 0;
+}
+.mainpageNavbar{
+    width: 100%;
+    z-index: 1000;
+    margin-top: 1%;
+    position: fixed;
+    z-index: 10000;
+}
+.mainpageLogo{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    margin-left: 0.5%;
+    margin-top: 0%;
+    font-size: 25px;
+    z-index: 1000;
+}
+.fa-solid {
+    color: white;
+    z-index: 10000;
+}
+.mainpageMenu{
+    width: 0%;
+    height: 0%;
+    background: rgb(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 20px;
+    font-size:35px;
+    border-bottom-left-radius: 100%;
+    transition: width 0.5s, height 0.5s, border-radius 0.5s;
+}
+.mainpageMenu.open-menu{
+    width: 25%;
+    height: 100%;
+    border-bottom-left-radius: 0;
+}
+.mainpageMenu a {
+    color: rgb(249, 249, 249);
+    text-decoration: none;
+    transition:transform translateY(-5px);
+}
+.mainpageMenu a:hover{
+    color:  rgb(246, 198, 160);
+    transform: translateY(-5px);
+}
+#menuIcon{
+    width: 60px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    z-index: 1;
+}
+#icon{
+    position: fixed;
+    right:0;
+    top: 50px;
+}
+.mainpageWelcome{
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.welcomeName{
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    width: 60%;
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    font-size: 180px;
+}
+.welcomeSlogan{
+    color: white;
+    height: 50px;
+    width: 400px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    font-size:30px;
+}
+.welcomeText{
+    color: white;
+    width: 40%;
+    height: 10%;
+    position: absolute;
+    left: 55%;
+    top: 88%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 600px){
+    .welcomeName{
+        font-size: 80px;
+        top: 0%;
+        left: 20%;
+    }
+    .welcomeSlogan{
+        visibility: hidden;
+    }
+    .welcomeText{
+        font-size: 13px;
+        left: 0%;
+        width: 100%;
+    }
+    .mainpageMenu.open-menu{
+        width: 100%;
+    }
+    .mainpageLogo{
+        margin-top: 2.3%;
+    }
+}
+@media (min-width: 600px) and (max-width: 1000px){
+
+    .welcomeName{
+        font-size: 100px;
+        top: 0%;
+        left: 20%;
+    }
+    .welcomeSlogan{
+        visibility: hidden;
+    }
+    .welcomeText{
+        font-size: 20px;
+        left: 0%;
+        width: 100%;
+    }
+    .mainpageMenu.open-menu{
+        width: 100%;
+    }
+    .mainpageLogo{
+        margin-top: 2.3%;
+    }
+}
+
+
+
+
+
+.mainpageAcceuil{
+    background-color: rgb(66, 66, 66);
+    width: 100%;
+    height: 130vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 3.3%;
+    padding-right: 5.5%;
+}
+.mainpageAcceuil H1 {
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Presentation{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+.Photo1{
+    background-image: url(Maison-D-hotes.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 40%;
+}
+.Text1{   
+    border: solid white 3px;
+    margin-left: 2%;
+    padding: 2%;
+    width: 60%;
+    border-radius: 20px;
+}
+.Text1 p::first-letter{
+    font-size: x-large;
+}
+.Text1 a {
+    color: rgb(246, 152, 75);
+    font-size:large;
+}
+.Text1 p {
+    font-size: 20px;
+}
+
+.quiNousSommes{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+
+}
+.Text2{
+    border: solid white 3px;
+    margin-left: 2%;
+    padding: 2%;
+    width: 50%;
+    border-radius: 20px;
+}
+.Text2 p::first-letter{
+    font-size: x-large;
+}
+.Text2 p {
+    font-size: 20px;
+}
+
+.Photo2{
+    background-image: url(camping.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 40%;
+}
+
+
+
+
+@media (max-width: 600px){
+
+    .mainpageAcceuil{
+        height:250vh;
+        margin-top: -10%;
+        gap: 10px;
+    }
+    .Presentation{
+        flex-direction: column;
+        margin-top: 0;
+        gap: 0px;
+        width: 100%;
+        margin: 0;
+    }
+    .Photo1{
+        width: 100%;
+        height: 50%;
+        
+    }
+    .Text1{
+        width: 85%;
+        height: 60%;
+        margin-left: 5%;
+        overflow: scroll;
+        overflow-x:hidden;
+    }
+    .Text1 p{
+        font-size: 15px;
+    }
+    .Text2 p{
+        font-size: 15px;
+    }
+    .Photo2{
+        width: 100%;
+        height: 40%;
+        margin-left: 5%;
+        background-size: cover;
+        background-position: center center;
+    }
+    .Text2{
+        width: 85%;
+        margin-left: 5%;
+    }
+    .quiNousSommes{
+        flex-direction: column;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 1000px){
+
+    .mainpageAcceuil{
+        height: 150%;
+    }
+    .Presentation{
+        flex-direction: column;
+        gap:10px;
+    }
+
+
+    .Photo1{
+        width: 85%;
+        height: 10%;
+        margin-left:10%;
+        margin-top: -50%;
+    }
+    .Text1{
+        width: 85%;
+        margin-left:10%;
+        margin-right: 5%;
+    }
+    .Photo2{
+        width: 85%;
+        height: 100%;
+        margin-left: 10%;
+    }
+    .Text2{
+        width: 85%;
+        height: 50%;
+        margin-left: 10%;
+    }
+    .quiNousSommes{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+
+
+
+.mainpageEvenements{
+    background-color: rgb(246, 152, 75);
+    background-color: rgb(56, 56, 56);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.Events{
+    display:flex;
+    width: 88vw;
+}
+.Event{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: beige;
+    flex: 0.5;
+    margin: 10px;
+    margin-top: 5%;
+    z-index: 100;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+.Events h3 {
+    background-color: rgb(246, 152, 75);
+    background-color: rgb(66, 66, 66);
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 85%;
+    margin: 0;
+    opacity: 0;
+    border-radius: 10px;
+}
+.Events a {
+    color: rgb(254, 252, 252);
+    color: rgb(246, 152, 75);
+    text-decoration: none;
+}
+.Event.active{
+    flex: 5;
+}
+.Event.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s ;
+}
+@media (max-width: 600px){
+    .mainpageEvenements{
+        width: 80%;
+        margin-left:10%;
+    }
+    .Events{
+        width: 100vw;
+    }
+    .Events h3{
+        font-size:20px;
+    }
+}
+
+
+
+@media (min-width: 601px) and (max-width: 1000px){
+    .mainpageEvenements{
+        width: 85%;
+        margin-left:10%;
+    }
+}
+
+
+
+.mainpageBonsplans{
+    width:88%;
+    height: 100%;
+    display: flex;
+    margin-top: 5%;
+    margin-left: 3.3%;
+    margin-right:3.3%;
+
+
+}
+
+.mainpageBonsplans h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 90px;
+    background-color: rgb(246, 152, 75 , 0.1);
+    background-color: rgba(49, 49, 49, 0.5);
+    color: white;
+    color: rgb(246, 152, 75);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin:0;
+    border-radius: 30px;
+
+
+}
+
+.mainpageBonsplans a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 2%;
+
+}
+
+.BPmaisondhote{
+    background: url(BPmaison-d-Hote.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    height:90%;
+    width: 50%;
+    border-radius: 30px;
+
+}
+.BPcamping{
+    background: url(BPcamping.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    height: 90%;
+    width: 50%;
+    border-radius: 30px;
+}
+.hover-left .BPmaisondhote{
+    width: var(--hover-width)
+}
+.hover-left .BPcamping{
+    width: var(--other-width) ;
+}
+.hover-right .BPcamping{
+    width: var(--hover-width)
+}
+.hover-right .BPmaisondhote{
+    width: var(--other-width) ;
+}
+.BPcamping, .BPmaisondhote {
+    transition: all var(--speed) ease-in-out;
+}
+
+@media (max-width: 600px){
+    .mainpageBonsplans{
+        width: 85%;
+    
+    }
+    .BPmaisondhote{
+        margin-left: 10%;
+    }
+    .mainpageBonsplans h1{
+        font-size: 40px;
+    }
+}
+
+@media (min-width:601px) and (max-width: 1000px){
+    .mainpageBonsplans{
+        width: 90%;
+    }
+    .BPmaisondhote{
+        margin-left:10%;
+    }
+    .mainpageBonsplans h1{
+        font-size: 70px;
+    }
+}
+
+
+.mainpageAvis{
+    background-color: rgb(246, 152, 75);
+    background-color: rgb(79, 74, 74);
+    background: url(Avis/AVIS.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+.mainpageAvis{
+    font-size: 20px;
+}
+
+.slide-row{
+    display: flex;
+    width: 3200px;
+    transition: 0.5s;
+
+}
+
+.slide-col{
+    width: 800px;
+    height: 400px;
+    position: relative;
+    
+}
+
+.user-img{
+    position:absolute;
+    top: 00;
+    right: 0;
+    height: 100%;
+
+}
+
+.user-img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.user-text{
+    background: rgb(251, 250, 249, 0.8);
+    opacity: 1;
+    width: 520px;
+    height: 320px;
+    position: absolute;
+    left:0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    color:rgb(240, 108, 0);
+    padding: 45px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+user-text h2{
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+
+    
+}
+
+
+
+.container{
+    width: 800px;
+    height:500px;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    transform: traslate(-50%,-50%);
+    gap: 20px;
+    
+}
+.indicator{
+    position: absolute;
+    left: 20%;
+    transform: translateX(-50%);
+    bottom: 10%;
+
+}
+
+
+.btn{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 4px;
+    border-radius: 15px;
+    background: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+.active{
+    width: 45px;
+}
+
+.Avis{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 600px){
+
+    p {
+        font-size:12px ;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container{
+        width:900px;
+        top: 10%;
+        left: 1%;
+        padding: 0%;
+        margin: 0%;
+    }
+    .Avis{
+        width: 47%;
+        height: 100%;
+    }
+    .slide-row{
+        display: flex;
+        width: 3200px;
+        transition: 5s;
+    
+    }
+    .user-text{
+        padding-top: 45px;
+        padding-left: 10px;
+        padding-right: 100px;
+    }
+
+}
+
+@media (min-width:601px) and (max-width: 1000px){
+    .user-text{
+        padding: 10px;
+    }
+    .container{
+        width:900px;
+        top: 10%;
+        left: 1%;
+        padding: 0%;
+        margin: 0%;
+    }
+}
+.mainpageContact{
+    background-color: rgb(246, 152, 75);
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+.ContactName{
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    bottom: -435%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    font-size: 180px;
+}
+.ContactUs{
+    height:400px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background-color:rgb(253, 243, 243, 0.2);
+    margin-top: 7%;
+    margin-left: 30%;
+    border-radius: 5px;
+    margin-bottom: 5%;
+}
+.ContactUs h2{
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+label{
+    font-size: larger;
+    margin-left: 5%;
+}
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom: solid rgb(246, 152, 75) 1px;
+    height: 10vh;
+    width: 80%;
+    margin-left: 5%;
+}
+textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: solid rgb(246, 152, 75) 1px;
+    width: 80%;
+    height: 100%;
+    margin-left: 5%;
+}
+#subbtn{
+    background-color: black;
+    color: rgb(246, 152, 75);
+    width: 40%;
+    position: relative;
+    right:-45%;
+    padding: 2%;
+    margin-bottom:1%;
+    border-radius:10px;
+}
+.Footbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content:space-between;
+    padding:1.5%;
+}
+.socialmedia{
+    display: flex;
+    gap: 20px;
+}
+@media (max-width: 600px){
+    .ContactName{
+        font-size: 80px;
+        bottom: -538%;
+    }
+    textarea {
+        height: 50px;
+    }
+}
+@media (min-width:601px) and (max-width: 1000px){
+    .ContactName{
+        font-size: 80px;
+        bottom: -441%;
+    }
+}
+.popup{
+    width:90%;
+    background-color:rgb(5, 5, 5 ,0.9);
+    border-radius:6px;
+    position:relative;
+    top:0%;
+    left: 5%;
+    transform: translate(-0%,-100%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility:hidden;
+    transition: transform 0.4s, bottom 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top:0%;
+    transform: translate(-0%,-100%) scale(1);
+}
+.popup img{
+    width: 100px;
+    border-radius: 50%;
+    margin-top: -50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0,2);
+}
+.popup h2 {
+    font-size: 40px;
+}
+.popup p {
+    font-size: 20px;
+}
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px, 0;
+    background-color: black;
+    color: rgb(246, 152, 75);
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0,2);
+}
+@media (max-width: 600px){
+    .ContactUs{
+        width: 70%;
+        margin-top: 10%;
+        margin-left: 20%;
+        padding: 2%;
+    }
+    .Footbar{
+        margin-bottom: 2%;
+        font-size: 10px;
+    }
+}
+@media (min-width:601px) and (max-width: 1200px){
+    .ContactUs{
+        width: 70%;
+        margin-top: 10%;
+        margin-left: 20%;
+        padding: 2%;
+    }
+}
